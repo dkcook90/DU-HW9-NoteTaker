@@ -51,6 +51,8 @@ app.post('/api/notes', (req, res) => {
             }
         });
     }
+
+    res.sendFile(path.join(__dirname, '/db/db.json'))
 });
 
 app.listen(PORT, () =>
